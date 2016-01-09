@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		3BF34E1E1C417C9C00EECFA8 /* GameplayKitUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BF34E1D1C417C9C00EECFA8 /* GameplayKitUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3BF34E261C417CB500EECFA8 /* SpriteKit+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF34E251C417CB500EECFA8 /* SpriteKit+Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3BF34E1A1C417C9C00EECFA8 /* GameplayKitUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GameplayKitUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BF34E1D1C417C9C00EECFA8 /* GameplayKitUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameplayKitUtils.h; sourceTree = "<group>"; };
 		3BF34E1F1C417C9C00EECFA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3BF34E251C417CB500EECFA8 /* SpriteKit+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SpriteKit+Utils.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +50,7 @@
 			children = (
 				3BF34E1D1C417C9C00EECFA8 /* GameplayKitUtils.h */,
 				3BF34E1F1C417C9C00EECFA8 /* Info.plist */,
+				3BF34E251C417CB500EECFA8 /* SpriteKit+Utils.swift */,
 			);
 			path = GameplayKitUtils;
 			sourceTree = "<group>";
@@ -130,6 +133,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BF34E261C417CB500EECFA8 /* SpriteKit+Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,6 +232,7 @@
 		3BF34E231C417C9C00EECFA8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -238,12 +243,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.jakubpetrik.GameplayKitUtils;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		3BF34E241C417C9C00EECFA8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
