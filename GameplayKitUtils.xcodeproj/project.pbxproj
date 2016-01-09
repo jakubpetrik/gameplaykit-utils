@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3BF34E1E1C417C9C00EECFA8 /* GameplayKitUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BF34E1D1C417C9C00EECFA8 /* GameplayKitUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3BF34E261C417CB500EECFA8 /* SpriteKit+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF34E251C417CB500EECFA8 /* SpriteKit+Utils.swift */; };
+		3BF34E3B1C41818800EECFA8 /* CommonComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF34E3A1C41818800EECFA8 /* CommonComponents.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -16,6 +17,7 @@
 		3BF34E1D1C417C9C00EECFA8 /* GameplayKitUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameplayKitUtils.h; sourceTree = "<group>"; };
 		3BF34E1F1C417C9C00EECFA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3BF34E251C417CB500EECFA8 /* SpriteKit+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SpriteKit+Utils.swift"; sourceTree = "<group>"; };
+		3BF34E3A1C41818800EECFA8 /* CommonComponents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonComponents.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +53,7 @@
 				3BF34E1D1C417C9C00EECFA8 /* GameplayKitUtils.h */,
 				3BF34E1F1C417C9C00EECFA8 /* Info.plist */,
 				3BF34E251C417CB500EECFA8 /* SpriteKit+Utils.swift */,
+				3BF34E3A1C41818800EECFA8 /* CommonComponents.swift */,
 			);
 			path = GameplayKitUtils;
 			sourceTree = "<group>";
@@ -133,6 +136,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BF34E3B1C41818800EECFA8 /* CommonComponents.swift in Sources */,
 				3BF34E261C417CB500EECFA8 /* SpriteKit+Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
