@@ -11,7 +11,7 @@ import GameplayKit
 public extension GKEntity {
 
 	@warn_unused_result
-	func forcedComponentForClass<ComponentType : GKComponent>(componentClass: ComponentType.Type) -> ComponentType {
+	public func forcedComponentForClass<ComponentType : GKComponent>(componentClass: ComponentType.Type) -> ComponentType {
 		guard let component = componentForClass(componentClass) else {
 			fatalError("\(self) is expecting to have \(componentClass)")
 		}
@@ -19,7 +19,7 @@ public extension GKEntity {
 	}
 }
 
-extension GKStateMachine {
+public extension GKStateMachine {
 
 	@warn_unused_result
 	public func forcedStateForClass<StateType : GKState>(stateClass: StateType.Type) -> StateType {
