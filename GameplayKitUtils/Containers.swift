@@ -15,6 +15,8 @@ public struct Stack<T> {
 		return items.isEmpty
 	}
 
+	public init() {}
+
 	public mutating func push(item: T) {
 		items.append(item)
 	}
