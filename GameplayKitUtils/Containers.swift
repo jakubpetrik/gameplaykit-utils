@@ -28,4 +28,8 @@ public struct Stack<T> {
 	public func peek() -> T? {
 		return items.last
 	}
+
+	public mutating func flush() {
+		items.removeAll()
+	}
 }
