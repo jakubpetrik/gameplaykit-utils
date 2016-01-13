@@ -32,4 +32,10 @@ public struct Stack<T> {
 	public mutating func flush() {
 		items.removeAll()
 	}
+
+	public mutating func flushEach(@noescape body: (T) throws -> ()) rethrows {
+		while !isEmpty {
+			try body(pop())
+		}
+	}
 }
