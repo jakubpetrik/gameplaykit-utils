@@ -39,3 +39,32 @@ public struct Stack<T> {
 		}
 	}
 }
+
+public struct ArrayMap<T> {
+	public let width: Int
+	public let height: Int
+	private var elements: [T]
+
+	public init(width: Int, height: Int, repeatedValue: T) {
+		self.width = width
+		self.height = height
+		elements = Array(count: width * height, repeatedValue: repeatedValue)
+	}
+
+	public subscript(x: Int, y: Int) -> T {
+		get {
+			return elements[y * width + x]
+		}
+		mutating set {
+			elements[y * width + x] = newValue
+		}
+	}
+
+	public func forEach(@noescape body: (x: Int, y: Int, element: T) throws -> ()) rethrows {
+		for y in 0..<height {
+			for x in 0..<width {
+				try body(x: x, y: y, element: self[x, y])
+			}
+		}
+	}
+}
