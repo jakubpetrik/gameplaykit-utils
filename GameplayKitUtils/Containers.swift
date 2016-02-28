@@ -67,4 +67,16 @@ public struct ArrayMap<T> {
 			}
 		}
 	}
+
+	public mutating func setElements(newElements: [[T]]) {
+		guard newElements.count == height && newElements[0].count == width else {
+			fatalError("Invalid number of elements!")
+		}
+
+		for y in 0..<height {
+			for x in 0..<width {
+				self[x, y] = newElements[y][x]
+			}
+		}
+	}
 }
