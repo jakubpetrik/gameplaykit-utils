@@ -9,16 +9,26 @@
 import GameplayKit
 import SpriteKit
 
-public class RenderComponent: GKComponent {
-	public unowned let sprite: SKSpriteNode
+open class RenderComponent: GKComponent {
+	open unowned let sprite: SKSpriteNode
 	public init(sprite: SKSpriteNode) {
 		self.sprite = sprite
+        super.init()
+	}
+
+	required public init?(coder aDecoder: NSCoder) {
+	    fatalError("init(coder:) has not been implemented")
 	}
 }
 
-public class PhysicsComponent: GKComponent {
-	public unowned let physicsBody: SKPhysicsBody
+open class PhysicsComponent: GKComponent {
+	open unowned let physicsBody: SKPhysicsBody
 	public init(body: SKPhysicsBody) {
 		physicsBody = body
+        super.init()
+	}
+
+	required public init?(coder aDecoder: NSCoder) {
+	    fatalError("init(coder:) has not been implemented")
 	}
 }

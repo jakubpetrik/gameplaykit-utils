@@ -9,7 +9,7 @@
 import Foundation
 
 public struct Stack<T> {
-	private var items = [T]()
+	fileprivate var items = [T]()
 
 	public var isEmpty: Bool {
 		return items.isEmpty
@@ -17,7 +17,7 @@ public struct Stack<T> {
 
 	public init() {}
 
-	public mutating func push(item: T) {
+	public mutating func push(_ item: T) {
 		items.append(item)
 	}
 
@@ -33,7 +33,7 @@ public struct Stack<T> {
 		items.removeAll()
 	}
 
-	public mutating func flushEach(@noescape body: (T) throws -> ()) rethrows {
+	public mutating func flushEach(body: (T) throws -> ()) rethrows {
 		while !isEmpty {
 			try body(pop())
 		}
@@ -43,12 +43,12 @@ public struct Stack<T> {
 public struct ArrayMap<T> {
 	public let width: Int
 	public let height: Int
-	private var elements: [T]
+	fileprivate var elements: [T]
 
 	public init(width: Int, height: Int, repeatedValue: T) {
 		self.width = width
 		self.height = height
-		elements = Array(count: width * height, repeatedValue: repeatedValue)
+		elements = Array(repeating: repeatedValue, count: width * height)
 	}
 
 	public subscript(x: Int, y: Int) -> T {
@@ -60,15 +60,15 @@ public struct ArrayMap<T> {
 		}
 	}
 
-	public func forEach(@noescape body: (x: Int, y: Int, element: T) throws -> ()) rethrows {
+	public func forEach(body: (_ x: Int, _ y: Int, _ element: T) throws -> ()) rethrows {
 		for y in 0..<height {
 			for x in 0..<width {
-				try body(x: x, y: y, element: self[x, y])
+				try body(x, y, self[x, y])
 			}
 		}
 	}
 
-	public mutating func setElements(newElements: [[T]]) {
+	public mutating func setElements(_ newElements: [[T]]) {
 		guard newElements.count == height && newElements[0].count == width else {
 			fatalError("Invalid number of elements!")
 		}
