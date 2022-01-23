@@ -9,7 +9,7 @@
 import GameplayKit
 
 public extension GKEntity {
-	public func forcedComponentForClass<ComponentType : GKComponent>(_ componentClass: ComponentType.Type) -> ComponentType {
+    func forcedComponentForClass<ComponentType : GKComponent>(_ componentClass: ComponentType.Type) -> ComponentType {
 		guard let component = component(ofType: componentClass) else {
 			fatalError("\(self) is expected to have \(componentClass) component")
 		}
@@ -18,7 +18,7 @@ public extension GKEntity {
 }
 
 public extension GKStateMachine {
-	public func forcedStateForClass<StateType : GKState>(_ stateClass: StateType.Type) -> StateType {
+    func forcedStateForClass<StateType : GKState>(_ stateClass: StateType.Type) -> StateType {
 		guard let state = state(forClass: stateClass) else {
 			fatalError("\(self) is expected to have \(stateClass) state")
 		}

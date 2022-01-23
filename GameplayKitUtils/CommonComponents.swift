@@ -10,7 +10,7 @@ import GameplayKit
 import SpriteKit
 
 open class RenderComponent: GKComponent {
-	open unowned let sprite: SKSpriteNode
+    public unowned let sprite: SKSpriteNode
 	public init(sprite: SKSpriteNode) {
 		self.sprite = sprite
         super.init()
@@ -22,7 +22,7 @@ open class RenderComponent: GKComponent {
 }
 
 open class PhysicsComponent: GKComponent {
-	open unowned let physicsBody: SKPhysicsBody
+    public unowned let physicsBody: SKPhysicsBody
 	public init(body: SKPhysicsBody) {
 		physicsBody = body
         super.init()
